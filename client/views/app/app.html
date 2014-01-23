@@ -1,0 +1,48 @@
+<template name="app">
+	<div class="row">
+		<div class="col-md-12 app">
+			{{#if loggedIn}}
+			<h2>Rooms</h2>
+			{{#each rooms}}
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="room"><h3><a href="/rooms/{{_id}}">{{name}}</a></h3>
+						{{#each users}}
+						<span class="label label-success">{{username}}</span>
+						{{/each}}
+						{{#if areCreator creator}}<button id={{_id}} type="button" class="deleteRoom close" aria-hidden="true">X</button>{{/if}}
+					</div>
+				</div>
+			</div>
+			{{/each}}
+			<div class="newRoom well">
+				<h3>New Room</h3>
+				<form class="form-horizontal" role="form" id="roomForm">
+					<div class="form-group">
+						<div class="col-md-12">
+							<label for="roomName" class="control-label">Name</label>
+							<input type="text" id="roomName"></input>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-12">
+							<label for="roomName" class="control-label">People to Invite <small>(Leave alone to make an open room)</small></label>
+							<select multiple id="roomUsers" class="form-control">
+								{{#each selectUsers}}
+								<option value={{username}}>{{username}}</option>
+								{{/each}}
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-lg-10">
+							<button type="submit" id="newRoom" class="btn btn-success">Create Room</button>
+						</div>
+					</div>
+				</form>
+				<div class="roomError"></div>
+			</div>
+			{{/if}}
+		</div>
+	</div>
+</template>

@@ -1,0 +1,52 @@
+body{
+	padding-top: 40px;
+	background: url('/img/notebook.png');
+	font-family: 'Exo 2';
+}
+div.app{
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+div.jumbotron{
+	background: url('/img/galaxy.jpg');
+	color: rgb(230, 230, 230);
+}
+
+.col-md-6{
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: center;
+}
+textarea#description, textarea#message{
+	width: 100%;
+}
+form#chatForm{
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	border-radius: 10px;
+}
+div#messages{
+	padding: 10px 10px 10px 10px;
+}
+/*#roomUsers{
+	height: 200px;
+	}*/
+/*div.newRoom{
+	padding: 10px 10px 10px 10px;
+	background: rgb(220, 220, 220);
+	border-radius: 10px;
+	}*/
+	h1.title{
+		font-family: 'Jura';
+		font-weight: bold;
+		text-shadow: 1px 1px 20px rgb(200, 0, 0);
+	}
+	div.panel{
+		padding-right: 20px;
+	}
