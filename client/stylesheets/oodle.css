@@ -11,8 +11,10 @@ div.app{
 }
 
 div.jumbotron{
-	background: url('/img/galaxy.jpg');
-	color: rgb(230, 230, 230);
+	/*background: url('/img/background3.jpg') 0 no-repeat;*/
+	background: rgba(255, 255, 255, 0.0);
+	background-size: cover;
+	margin-bottom: -50px;
 }
 
 .col-md-6{
@@ -42,10 +44,13 @@ div#messages{
 	background: rgb(220, 220, 220);
 	border-radius: 10px;
 	}*/
-	h1.title{
-		font-family: 'Jura';
-		font-weight: bold;
-		text-shadow: 1px 1px 20px rgb(200, 0, 0);
+	.jumbotron h1.title{
+		font-family: 'Oswald', sans-serif;
+		color: black;
+		text-shadow: 0px 0px 20px rgb(0, 200, 200);
+	}
+	.jumbotron p.lead{
+		color: black;
 	}
 	div.panel{
 		padding-right: 20px;
